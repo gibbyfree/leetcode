@@ -8,7 +8,7 @@ function traversePreorder(root: TreeNode | null, output: number[]): number[] {
         return [];
     }
     output.push(root.val);
-    traverse(root.left, output);
-    traverse(root.right, output);
+    traversePreorder(root.left, output);
+    traversePreorder(root.right, output);
     return output;
 }
